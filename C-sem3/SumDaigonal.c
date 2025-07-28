@@ -1,9 +1,9 @@
-// Write a program to calculate trhe average of daigonal element of nXn matrix of number
+// Write a program to calculate the average of daigonal element of nXn matrix of number
 #include <stdio.h.>
 
 int main (){
     //variable declaration
-    int rows, columns, i=0, j=0, sum = 0;
+    int rows, columns, sum = 0;
 
     // Create a nXn matrix
     int mat[3][3] = {{11, 12, 13},

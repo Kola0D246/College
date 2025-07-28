@@ -1,3 +1,5 @@
+// find area of triangle
+
 class AreaTriangle {
     public static void main(String args[]) {
         float base = Float.parseFloat(args[0]);

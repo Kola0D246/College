@@ -1,6 +1,6 @@
 // Write a program to compare 3 given number and display 2nd largest number
 
-public class SecLargest {
+public class SecondLargestofThree {
     public static void main(String num[]){  // cmd line argumentation - create an array of string separated by space
         int num1, num2, num3;
         num1= Integer.parseInt(num[0]);     // we cannot do simple type casting from string to int because java is a rulezilla :>
