@@ -1,8 +1,8 @@
-## Creting full array of player choice and computer choice
+## Creating full array of player choice and computer choice
 
 import numpy as np
 
-# Crete Grid
+# Create Grid
 Gridnum = np.array([8, 3, 4, 1, 5, 9, 6, 7, 2])
 playerChoice = comptrChoice = np.full(9,0)
 Grid = np.full(9, " ")
