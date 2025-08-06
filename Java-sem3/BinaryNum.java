@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class BinaryNum {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
-        int num, bit;
+        int num;
         String binary="";
         boolean isNeg=false;
         

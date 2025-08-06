@@ -6,22 +6,55 @@
 }
 </style>
 
-<form action="/action">
+<form action="/destination_link">
     <label for="name">Alphanumeric input:</label> 
-    <input type="text" placeholder="Enter name" id="name"> <br>
+    <input type="text" placeholder="Enter name" id="name" name="username" value="NA"> <br>
 
     <label for="age">Numeric input:</label>
-    <input type="number" placeholder="Enter age" id="age"> <br>
+    <input type="number" placeholder="Enter age" id="age" name="age" value="00"> <br>
 
     <label for="pass">Password input:</label>
-    <input type="password" placeholder="Enter password" id="pass"> <br>
+    <input type="password" placeholder="Enter password" id="pass" name="pass" value=""> <br>
 
     <label for="date"> Date input:</label>
-    <input type="date" id="date"> <br>
+    <input type="date" id="date" name="DOB" value=""> <br>
 
     <label for="time">Time input:</label>
-    <input type="time" id="time"> <br>
+    <input type="time" id="time" name="time" value=""> <br>
 
     <label for="color">Color input:</label>
-    <input type="color" id="color"> <br>
+    <input type="color" id="color" name="" value=""> <br>
+
+    <label for="range">CGPA:</label>
+    <span> 4 </span>
+    <input type="range" id="range" name="CGPA" value="4" min="4" max="10"> <br>
+    <span> 10 </span> <br>
+
+    <label for="branch">Branch Name</label> <br>
+    <div id="branch">
+        <input type="checkbox" id="branch" name="branch" value="AI"> AI <br>
+        <input type="checkbox" id="branch" name="branch" value="CSE"> CSE <br>
+        <input type="checkbox" id="branch" name="branch" value="BC"> BC <br>
+    </div>
+
+    <!-- name is key so it remain same. value will change for different branch-->
+
+    <label for="gender">Gender</label> <br>
+    <input type="radio" id="gender" name="gender" value="Male"> Male <br>
+    <input type="radio" id="gender" name="gender" value="Femal"> Female <br>
+
+    <select>
+        <option value="Bhopal"> Bhopal </option>
+        <option value="Vidisha"> Vidisha </option>
+        <option value="Indore"> Indore </option>
+        <option value="Ujjain"> Ujjain </option>
+    </select>
+
+
+
+    <br>
+    <button>Submit</button>
+    <button>Reset</button>
 </form>
+
+<!-- for and id are connected -->

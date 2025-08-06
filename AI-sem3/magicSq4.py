@@ -40,9 +40,9 @@ def checkWin():
 def MagicSq(contdrCh):
     for i in range(3):
         if 15 - contdrCh[i*3] + contdrCh[i*3+1] + contdrCh[i*3+2] == 15: return True
-        if contdrChoice[i] + contdrChoice[i+3] + contdrChoice[i+6] == 15: return True
-    if contdrChoice[2] + contdrChoice[4] + contdrChoice[6] == 15: return True
-    if contdrChoice[0] + contdrChoice[4] + contdrChoice[8] == 15: return True
+        if contdrCh[i] + contdrCh[i+3] + contdrCh[i+6] == 15: return True
+    if contdrCh[2] + contdrCh[4] + contdrCh[6] == 15: return True
+    if contdrCh[0] + contdrCh[4] + contdrCh[8] == 15: return True
     return False
 
 def AImove():
