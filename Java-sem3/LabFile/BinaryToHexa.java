@@ -1,7 +1,7 @@
 public class BinaryToHexa {
     static boolean isBinary(String num) {
         for (int i=0;i<num.length();i++) {
-            if (num.charAt(i) != '0' || num.charAt(i) != '1') {
+            if (num.charAt(i) != '0' && num.charAt(i) != '1') {
                 System.out.println("Given sequence is not binary");
                 return false;
             }
@@ -10,13 +10,14 @@ public class BinaryToHexa {
     }
     public static void main(String[] args) {
         String hexa = "";
+        int len = args[0].length();
         if (!isBinary(args[0])) {
             return;
         }
         int binary = Integer.parseInt(args[0]);
-        for (int i=0; i<=args[0].length(); i+=4) {
-            int block = binary%1000;
-            binary /= 1000;
+        for (int i=0; i<=len/4; i++) {
+            int block = binary%10000;
+            binary /= 10000;
 
             switch (block) {
                 case 0000:

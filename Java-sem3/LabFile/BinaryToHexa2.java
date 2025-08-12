@@ -6,7 +6,7 @@ public class BinaryToHexa2 {
             char bit = binary.charAt(i);
             if (bit != '0' && bit != '1') {
                 System.out.println("Given sequence is not binary");
-                return 0;
+                return -1;
             }
             else if (bit == '1') {
                 sum += (int) Math.pow(2, len-1-i);
@@ -18,6 +18,7 @@ public class BinaryToHexa2 {
     static String toHexa(int num) {
         String hexa="";
         int temp;
+        if (num == 0) {hexa="0";}
         while (num != 0) {
             temp = num%16;
             switch (temp) {
@@ -46,9 +47,11 @@ public class BinaryToHexa2 {
         }
         return hexa;
     }
+
     public static void main(String[] args) {
-        
         int dec = toDecimal(args[0]);
+        if (dec == -1){return;}     // not correct binary
+
         String hexa = toHexa(dec);
         
         System.out.printf("Hexadecimal for %s = %s", args[0], hexa);
