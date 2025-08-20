@@ -12,7 +12,7 @@ void insert(int val, int pos, int arr[], int len) {
 
 int main(){
     // Given array
-    int arr[] = {1, 5, 5};
+    int arr[] = {1, 5, 5, 4, 3, 2, 7};
     int len = sizeof(arr)/sizeof(arr[0]);
 
     // get value of n and if n > len of arr, throw error

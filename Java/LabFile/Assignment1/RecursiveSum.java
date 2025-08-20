@@ -1,12 +1,12 @@
 public class RecursiveSum {
     static int digitSum(int num) {
         int sum = 0;
-        while (num > 0) {
+        while (num >= 1) {
             int dig = num % 10;
             sum += dig;
             num /= 10;
         }
-        if (sum / 10 >= 1) {
+        if (sum >= 10) {
             sum = digitSum(sum);
         }
         return sum;
