@@ -14,12 +14,15 @@ int main(){
     // Given array
     int arr[] = {1, 5, 5, 4, 3, 2, 7};
     int len = sizeof(arr)/sizeof(arr[0]);
+    int hasIM=1;    // false
 
     // get value of n and if n > len of arr, throw error
-    int n = 3, hasIM=1;
+    int n;
+    printf("largest number to be find:");
+    scanf("%d", &n);
     if (n>len || n<0) {
         printf("VALUEERROR: n cannot be more than size of array %d or less than 0", len);
-        return 1;
+        return;
     }
 
     // create a n length array and initialize with MIN_INT
@@ -39,14 +42,14 @@ int main(){
                 break;              // once element is placed in lrg, breaks the smaller loop and goes to next element in arr
             }
         }
-        if (INT_MIN == arr[i]) {    // Check if arr contain INT_MIN as element
+        if (arr[i] == INT_MIN) {    // Check if arr contain INT_MIN as element
             hasIM = 0;    //True
         }
     }
     if (lrg[n-1] == INT_MIN && hasIM != 0){     // if last element of lrg is INT_MIN (initialized value) but INT_MIN is not in arr, it means we not have 3 different element in arr. So raise error
-        printf("ValueError! Need atleast 3 different numbers");
+        printf("ValueError! Need atleast %d different numbers", n);
     }
     else {
-        printf("The third largest number is %d", lrg[n-1]);
+        printf("The %d largest number is %d", n, lrg[n-1]);
     }
 }

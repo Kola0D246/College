@@ -19,19 +19,19 @@ public class Calci {
                 break;
 
             case '-':
-                System.out.printf("Sum = %.2f\n", num1 - num2);
+                System.out.printf("Diff = %.2f\n", num1 - num2);
                 break;
 
             case '*':
-                System.out.printf("Sum = %.2f\n", num1 * num2);
+                System.out.printf("Prod = %.2f\n", num1 * num2);
                 break;
 
             case '/':
-                System.out.printf("Sum = %.2f\n", num1 / num2);
+                System.out.printf("Qout = %.2f\n", num1 / num2);
                 break;
 
             case '%':
-                System.out.printf("Sum = %.2f\n", num1 % num2);
+                System.out.printf("Rem = %.2f\n", num1 % num2);
                 break;
 
             default:
