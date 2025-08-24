@@ -24,3 +24,5 @@ int main(){
     }
     printf("The third largest number is %d", arr[idx_max]);
 }
+
+// improve this code for various test cases
