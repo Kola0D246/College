@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1> Student Registration Form </h1>
+
+    <form>
+        <h2>Personal Information</h2>
+        <hr>
+
+        <label for="name">Student Name:</label>
+        <input id="name" type="text" placeholder="First Name">
+        <input id="name" type="text" placeholder="Last Name">
+        <br>
+        
+        <label for="father">Father Name:</label>
+        <input id="father" type="text" placeholder="First Name">
+        <input id="father" type="text" placeholder="Last Name">
+        <br>
+
+        <label for="pass">Password:</label>
+        <input id="pass" type="password" placeholder="Password">
+        <br>
+
+        <label for="dob">DOB:</label>
+        <input id="dob" type="date">
+        <br>
+
+        <label for="gender">Gender:</label>
+        <input id="gender" type="radio" value="Male"> Male
+        <input id="gender" type="radio" value="Female"> Female
+        <input id="gender" type="radio" value="Other"> Other
+        <br>
+
+        <label for="age">Age (18-60):</label>
+        <input id="age" type="range">
+        <br>
+
+        <label for="nation">Nationality</label>
+        <select id="nation">
+            <option value="IND">India</option>
+            <option value="AFG">Afghanistan</option>
+            <option value="ARG">Argentina</option>
+            <option value="AUS">Australia</option>
+            <option value="BGD">Bangladesh</option>
+            <option value="BEL">Belgium</option>
+            <option value="BRA">Brazil</option>
+            <option value="CDN">Canada</option>
+            <option value="CHN">China</option>
+            <option value="DEN">Denmark</option>
+            <option value="EGY">Egypt</option>
+            <option value="FIN">Finland</option>
+            <option value="FRA">France</option>
+            <option value="GER">Germany</option>
+            <option value="GRC">Greece</option>
+            <option value="ICE">Iceland</option>
+            <option value="IDN">Indonesia</option>
+            <option value="ISR">Isreal</option>
+            <option value="ITY">Italy</option>
+            <option value="JPN">Japan</option>
+            <option value="KOR">Korea</option>
+            <option value="MEX">Mexico</option>
+            <option value="NPL">Nepal</option>
+            <option value="NLD">Netherland</option>
+            <option value="NZL">New Zealand</option>
+            <option value="NOR">Norway</option>
+            <option value="PER">Peru</option>
+            <option value="PHL">Phillipines</option>
+            <option value="POL">Poland</option>
+            <option value="RUS">Russia</option>
+            <option value="SIN">Singapore</option>
+            <option value="SAF">South Africa</option>
+            <option value="SPN">Spain</option>
+            <option value="SLA">Sri Lanka</option>
+            <option value="SWE">Sweden</option>
+            <option value="SWI">Switzerland</option>
+            <option value="UNK">United Kingdom</option>
+            <option value="USA">United States</option>
+        </select>
+        <br>
+
+        <label for="department">Department:</label>
+        <select id="department">
+            <option value="AI">Artificial Intelligence</option>
+            <option value="CE">Civil Engineering</option>
+            <option value="CS">Computer Science</option>
+            <option value="EE">Electrical Engineering</option>
+            <option value="EC">Electronic Engineering</option>
+            <option value="IT">Information Technology</option>
+            <option value="ME">Mechanical Enginnering</option>
+        </select>
+
+        <label for="branch">Branch:</label>
+        <select id="brnach">
+            <!--Based on department choose using JS-->
+        </select>
+        <br>
+
+        <label for="ExtraInfo">About Yourself:</label>
+        <textarea id="ExtraInfo">Write something about Yourself</textarea>
+
+        <h2>Contact Details</h2>
+        <hr>
+
+        <label for="mobNo">Mobile Number:</label>
+        <input id="mobNo" type="number" placeholder="Number" maxlength="10">
+        <br>
+
+        <label for="email">Email ID:</label>
+        <input id="email" type="text" placeholder="email">
+        <br>
+
+        
+    </form>
+</body>
+</html>
