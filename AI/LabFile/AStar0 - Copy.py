@@ -20,9 +20,6 @@ graph_EC = {    # Straight-line distance
     'G':0
 }
 
-start = 'A'
-goal = 'G'
-
 openlist = []
 closelist = []
 

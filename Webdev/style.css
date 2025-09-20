@@ -1,0 +1,16 @@
+div {
+    border: solid rgb(179, 74, 74) 20px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;   /* horizontal align */
+    align-items: center;       /* vertical align */
+    margin: 20px 600px;
+    padding: 20px;
+}
+p {
+    font-size: 30px;
+    color:darkorange;
+    font-weight: 300;
+
+}

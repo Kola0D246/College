@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flexbox</title>
+    <style>
+        .navbar {
+            height: 50px;
+            background-color: bisque;
+            margin: 5px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            height: 350px;
+            width:350px;
+            background-color: lightblue;
+            flex-direction: row;
+            align-items: center;
+        }
+        .item {
+            height: 50px;
+            width:50px;
+            border: solid black 1px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar"> NAVIGATION BAR </div>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+</body>
+</html>

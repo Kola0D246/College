@@ -19,6 +19,7 @@ graph_EC = {    # Straight-line distance
 }
 
 def pathcost(lst):
+    print(lst)
     pathcost = 0
     for idx in range(1, len(lst)):
         connection = graph_connections[lst[idx-1]]
@@ -50,7 +51,7 @@ def AStar(start, goal, openlist=[], closelist=[]):
     
     connections = graph_connections[start]
     for node in connections.keys():
-        fullcost = graph_EC[node] + pathcost(tuple(closelist) + (node,))
+        fullcost = graph_EC[node] + pathcost(closelist + [node])
         add(openlist, node, fullcost)
 
     nxt = openlist[0][0]
