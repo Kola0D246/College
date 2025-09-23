@@ -3,7 +3,7 @@ class Ar_Rectangle {
         Rectangle R1 = new Rectangle();
         Rectangle R2 = new Rectangle(10, 12);
         System.out.println("Area of R1 = " + R1.area() + " unit sq");
-        System.out.println("Area of R1 = " + R2.area() + " unit sq");
+        System.out.println("Area of R2 = " + R2.area() + " unit sq");
     }
 }
 

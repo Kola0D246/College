@@ -1,5 +1,4 @@
 Grid = []
-
 i=0
 while i<9:
     print(i)
@@ -7,7 +6,7 @@ while i<9:
     if sign != 'X' and sign != 'O':
         print("ValueError! Only X and O are allowed. Please re-enter")
     else:
-        Grid[i] = sign
+        Grid.append(sign)
         i += 1
 
 for i in range(3):

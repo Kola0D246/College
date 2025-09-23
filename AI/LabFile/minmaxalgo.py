@@ -155,3 +155,4 @@ elif finalResult == comptr:
     print("Computer wins the Game!")
 else:
     print("Its a Draw!")
+showGrid()

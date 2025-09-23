@@ -57,6 +57,7 @@ int main() {
     struct Process readyQ[] = {P0, P1, P2, P3};
 
     qSort(readyQ, 0, count-1);
+    printf("id | CT | TAT | WT\n");
 
     for (int i=0; i<count;i++){
         while (1) {

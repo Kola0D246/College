@@ -1,6 +1,7 @@
 // FCFS (First Come First Serve): Process that comes first in ready-queue, gets CPU first
 // Non-primitve: CPU is allocated to next process only after completion of current process
 #include <stdio.h>
+#include <stdlib.h> 
 
 struct Process {
     int pid;
@@ -22,30 +23,10 @@ struct Process create(int pid, int arrival, int burst){
     return P;
 }
 
-//////////////////// QUICK SORT /////////////////////////
-void swap(struct Process *a, struct Process *b) {
-    struct Process temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void qSort(struct Process arr[], int low, int high) {
-    if (low < high) {
-        int pivot = arr[high].arrival;  // pivot = last element's arrival
-        int i = low;
-
-        for (int j = low; j < high; j++) {
-            if (arr[j].arrival <= pivot) {
-                swap(&arr[i++], &arr[j]);
-            }
-        }
-
-        swap(&arr[i], &arr[high]);
-
-        // Recursively sort left and right partitions
-        qSort(arr, low, i - 1);
-        qSort(arr, i + 1, high);
-    }
+int compareArrival(const void *a, const void *b) {
+    const struct Process *p1 = (const struct Process *)a;
+    const struct Process *p2 = (const struct Process *)b;
+    return p1->arrival - p2->arrival;
 }
 
 /////////////////// DRIVER FUNCTION /////////////////////
@@ -59,26 +40,8 @@ int main() {
     struct Process P3 = create(++count, 5, 3);
     struct Process readyQ[] = {P0, P1, P2, P3};
 
-    qSort(readyQ, 0, count-1);
-
-    while (i<count){
-        // skip when CPU is idle
-        if (readyQ[i].arrival > clock){
-            clock= readyQ[i].arrival;
-        }
-        for (int j=i+1; j<count; j++){
-            if (readyQ[j].arrival != readyQ[i].arrival){
-                break;
-            }
-            
-        }
-        i++;
-    }
-    
-    
-    
-    
-    
+    qsort(readyQ, count, sizeof(struct Process), compareArrival);
+    printf("id | CT | TAT | WT\n");
     
     for (int i=0; i<count;i++){
         if (readyQ[i].arrival > clock){
@@ -98,4 +61,3 @@ int main() {
     printf("Average turnaround time = %.2f\n", accTurnaround/count);
     printf("Average waiting time = %.2f\n", accWaiting/count);
 }
-
