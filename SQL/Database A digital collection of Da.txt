@@ -1,0 +1,34 @@
+Database: A digital collection of Data
+Types: Relation (Tabular like SQL, Oracle) and Non-Relational (like MangoDB, NoSQL)
+CRUD operation: Create Read Update Delete Data from Database. These are basic DBMS operations
+DBMS: Database management system -> update or retrieve data from database
+----------------------------------------------------
+SQL: Structured Query Language. use to interact with relational Databases
+SEQUEL: Structured English Query Language. Created by IBM
+---------------------------------------------------
+Database: Contain many Tables.
+Table: Contain rows
+Rows: Individual data point. Contain cells align with respective column
+Column: Provide structure/ schema of Table. What data are we storing for each individual/unit
+---------------------------------------------------
+SQL COMMANDS
+SQL commands always end with ;
+We write Command in capital and other things like names in small by convention
+
+A) DATABASE CREATE/ DROP/ USE
+	CREATE DATABASE <name>;	create a new database
+	DROP DATABASE <name>;		delete an existing database
+	USE <name>;		tells that following command will apply to this database
+
+B) CREATE TABLE
+	CREATE TABLE <table name> (				// define schema: columns of table
+		<column_1_name>  <datatype>  <constraint>, 
+		<column_2_name>  <datatype>  <constraint>, 
+		<column_3_name>  <datatype>  <constraint>, 
+	);
+
+C) ADD Row to table
+	INSERT INTO <table name> VALUE (<values in order of column>);
+
+D) print table
+	SELECT [column, row, * for all table] FROM <table name>;

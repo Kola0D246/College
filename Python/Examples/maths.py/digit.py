@@ -3,7 +3,8 @@ def digit_frm_dot(num, place):
     num=str(num)
     try: zero=num.index('.')
     except: zero=0
-    return(int(num[zero-x]))
+    try: return int(num[zero-place])
+    except: return None
 
 def digitcount(num):
     '''Count number of digit in integer or float'''
@@ -23,4 +24,4 @@ def count(frm, to, by=1):
     
     return(lst)
 
-print(lstdigits(1457.34))
+print(count(1457, 1460))

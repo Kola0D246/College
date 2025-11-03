@@ -2,37 +2,56 @@
 <html lang="en">
 <head>
     <title>Flexbox</title>
-    <style>
-        .navbar {
-            height: 50px;
+    <Style>
+        *{
+            padding: 10px;
+        }
+        #navbar{
             background-color: bisque;
-            margin: 5px;
+            height: 40px;
+            width: 100%;
             text-align: center;
         }
-        .container {
+        div{
+            height:100px;
+            width:300px;
+            margin-top: 20px;
+        }
+        #red{
+            background-color: rgb(233, 170, 170);
+        }
+        #blue{
+            background-color: rgb(162, 203, 236);
+        }
+        #green{
+            background-color: rgb(131, 225, 131);
+        }
+        #yellow{
+            background-color: rgb(243, 243, 113);
+        }
+        #flex{
+            width: 600px;
+            height: 550px;
+            margin: 20px;
+            border: 2px solid black;
             display: flex;
-            height: 350px;
-            width:350px;
-            background-color: rgb(16, 165, 214);
-            flex-direction: row;
-            align-items: center;
+            flex-direction: column;
+            background-color:rgb(243, 11, 135);
+            justify-content:space-around;
+            align-items:left;
+            align-content: center;
         }
-        .item {
-            height: 50px;
-            width:50px;
-            border: solid black 1px;
-            padding: 10px;
-            margin: 10px;
-        }
-    </style>
+    </Style>
 </head>
 <body>
-    <div class="navbar"> NAVIGATION BAR </div>
-    <div class="container">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">D</div>
+    <div id="navbar">NAVIGATION BAR</div>
+    <div id="flex">
+        <div id="red">A</div>
+        <div id="yellow">B</div>
+        <div id="green">C</div>
+        <div id="blue">D</div>
     </div>
+</body>
+</html>
 </body>
 </html>

@@ -20,7 +20,9 @@ struct Process create(int pid, int arrival, int burst, int priority){
     P.arrival = arrival;
     P.burst = P.left = burst;
     P.priority = priority;
-    P.completion = P.turnaround= P.waiting= -1;
+    P.completion = -1;
+    P.turnaround= -1;
+    P.waiting= -1;
     return P;
 }
 
@@ -32,7 +34,7 @@ int compareArrival(const void *a, const void *b) {
 
 /////////////////// DRIVER FUNCTION /////////////////////
 int main() {
-    int count=0, clock=0, finished=0;
+    int count=0, clock=0, finished=0, ascending=0;
     float accTurnaround=0, accWaiting=0;
 
     struct Process P0 = create(++count, 4, 6, 2);

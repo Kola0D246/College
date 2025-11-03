@@ -3,7 +3,7 @@ This program is to write any number from digits to words and words to digits.
 """
 
 ### terms ################################################################################################################
-Fvalue1= ('zero','one','two','three','four','five','six','seven','eight','nine','point')
+Fvalue1= ('zero','one','two','three','four','five','six','seven','eight','nine',)
 Pvalue1 = ('teen', 'ty', 'hundred')
 Pvalue_Ind = ('', 'thousand', 'lakh', 'carore')
 Pvalue_Int = ('thousand', 'million', 'billion', 'trillion', 'quadrillion')
@@ -45,3 +45,7 @@ def int_to_word(num):
 def dec_to_word(num):
     '''Write float number from digits to words'''
     pass
+
+for d in len(str(num)):
+    if d == '-':sign = 'minus'
+    elif d == '.': point = d.index()
